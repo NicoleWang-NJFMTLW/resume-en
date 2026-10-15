@@ -1045,6 +1045,8 @@
       topicToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
       topicToggle.textContent = expanded ? 'Show less ↑' : 'Show all 32 ↓';
     });
+    // 从主页 MDPI 专栏策划链接跳过来时，直接展开全部
+    if(location.hash === '#topics'){ topicToggle.click(); }
   }
 
   // 导出 PDF：打印前展开所有折叠内容，打印后还原
